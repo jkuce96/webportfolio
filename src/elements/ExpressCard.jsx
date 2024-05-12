@@ -2,7 +2,7 @@ import React from 'react'
 
 const ExpressCard = () => {
   return (
-    <div className="relative rounded-lg bg-[#170c27] p-2 h-[350px] w-[28rem]">
+    <div className="relative rounded-lg bg-[#170c27] p-2 h-[350px] sm:w-[28rem] w-[22rem]">
   <div className="relative flex text-center">
     <div className="flex pl-3.5 pt-3"><svg viewBox="0 0 24 24" fill="currentColor" className="-ml-0.5 mr-1.5 h-3 w-3 text-red-500/20">
         <circle r="12" cy="12" cx="12"></circle>
