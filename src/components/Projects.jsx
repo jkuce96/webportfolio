@@ -3,7 +3,7 @@ import reactLogo from "../assets/reactlogo.png"
 import { FaHandPointer } from "react-icons/fa";
 
 
-const Projects = ( { setCrypto, setInfo, setTime } ) => {
+const Projects = ( { setCrypto, setInfo, setTime, setRandomCrypto, setWeather } ) => {
     const toggleCrypto = () => {
         setCrypto(prevCrypto => {
             const newCryptoState = !prevCrypto;
@@ -12,6 +12,8 @@ const Projects = ( { setCrypto, setInfo, setTime } ) => {
         });
         setInfo(false)
         setTime(false)
+        setRandomCrypto(false)
+        setWeather(false)
     };
     const toggleInfo = () => {
         setInfo(prevInfo => {
@@ -21,6 +23,9 @@ const Projects = ( { setCrypto, setInfo, setTime } ) => {
         })
         setCrypto(false)
         setTime(false)
+        setRandomCrypto(false)
+        setWeather(false)
+
     };
     const toggleTime = () => {
         setTime(prevTime => {
@@ -30,7 +35,32 @@ const Projects = ( { setCrypto, setInfo, setTime } ) => {
         })
         setCrypto(false)
         setInfo(false)
+        setRandomCrypto(false)
+        setWeather(false)
     }
+    const toggleRandomCrypto = () => {
+        setRandomCrypto(prevRandomCrypto => {
+            const newRandomCryptoState = !prevRandomCrypto;
+            console.log(newRandomCryptoState)
+            return newRandomCryptoState
+        })
+        setCrypto(false)
+        setInfo(false)
+        setTime(false)
+        setWeather(false)
+    }
+    const toggleWeather = () => {
+        setWeather(prevWeather => {
+            const newWeatherState =! prevWeather;
+            console.log(newWeatherState)
+            return newWeatherState
+        })
+        setCrypto(false)
+        setInfo(false)
+        setTime(false)
+        setRandomCrypto(false)
+    }
+
   return (
     <div className="w-full bg-[#11071F] pt-[5rem]">
         <div className="max-w-[1080px] mx-auto text-white h-full">
@@ -50,7 +80,7 @@ const Projects = ( { setCrypto, setInfo, setTime } ) => {
     </div>
     
   </div>
-  <div onClick={toggleCrypto} className="w-full h-full flex-grow bg-gradient-to-br from-red-900 to-red-500 p-[1rem] relative cursor-pointer hover:from-red-900 to red-50">
+  <div onClick={toggleCrypto} className="w-full h-full flex-grow bg-gradient-to-br from-red-900 to-red-500 p-[1rem] relative cursor-pointer hover:from-red-900 to red-50 active:from-red-800">
   <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
         <h1 className="text-center font-bold">Crypro price checker</h1>
         <FaHandPointer  className="absolute top-1/6 left-1/2"/>
@@ -71,8 +101,20 @@ const Projects = ( { setCrypto, setInfo, setTime } ) => {
         
     </div>
   </div>
-  <div className="w-full h-full flex-grow bg-gradient-to-br from-black to-gray-800 p-[1rem]"></div>
-  <div className="w-full h-full flex-grow bg-gradient-to-br from-purple-900 to-purple-500 p-[1rem]"></div>
+  <div onClick={toggleRandomCrypto} className="w-full h-full flex-grow bg-gradient-to-br from-black to-gray-800 hover:from-black to gray-50 p-[1rem] relative cursor-pointer">
+  <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+        <h1 className="text-center font-bold">Random crypto picker</h1>
+        <FaHandPointer  className="absolute top-1/6 left-1/2"/>
+        
+    </div>
+  </div>
+  <div onClick={toggleWeather} className="w-full cursor-pointer relative h-full flex-grow bg-gradient-to-br from-purple-900 to-purple-500 hover:from-purple-900 active:from-purple-800 p-[1rem]">
+  <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+        <h1 className="text-center font-bold">Zkontrolovat počasí</h1>
+        <FaHandPointer  className="absolute top-1/6 left-1/2"/>
+        
+    </div>
+  </div>
   <div className="w-full h-full flex-grow bg-gradient-to-br from-orange-900 to-orange-500 p-[1rem]"></div>
   <div className="w-full h-full flex-grow bg-gradient-to-br from-indigo-900 to-indigo-500 p-[1rem]"></div>
 </div>

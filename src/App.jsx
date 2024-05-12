@@ -10,11 +10,15 @@ import Crypto from "./components/Crypto"
 import { useState } from "react"
 import Cardcheck from "./components/Cardcheck"
 import Timecheck from "./components/Timecheck"
+import Randomcrypto from "./components/Randomcrypto"
+import Weathercard from "./components/Weathercard"
 
 const App = () => {
   const [crypto, setCrypto] = useState(false);
   const [info, setInfo] = useState(false);
   const [time, setTime] = useState(false);
+  const [randomCrypto, setRandomCrypto] = useState(false);
+  const [weather, setWeather] = useState(false);
 
 
   return (
@@ -25,11 +29,16 @@ const App = () => {
     <About />
 
     <Cards />
-    <Projects setCrypto={setCrypto} setInfo={setInfo} setTime={setTime}/>
+    <Projects setCrypto={setCrypto} setInfo={setInfo} setTime={setTime} setRandomCrypto={setRandomCrypto} setWeather={setWeather}/>
 
     {crypto && <Crypto crypto={crypto} />}
     {info && <Cardcheck info={info} />}
     {time && <Timecheck time={time}/>}
+    {randomCrypto && <Randomcrypto randomCrypto={randomCrypto} />}
+    {weather && <Weathercard weather={weather}/>}
+
+    
+    
     
     
     
