@@ -8,7 +8,7 @@ const PersonalCard = (  ) => {
   return (
     <div className="card  absolute top-[3rem] z-50 right-0 cursor-auto">
         
-    <div className="flex items-center p-3 w-[20rem] h-[8rem] sm:w-[26rem] sm:h-[12rem] bg-white rounded-md shadow-lg">
+    <div className="flex items-center p-3 w-[20rem] h-[8rem] sm:w-[26rem] sm:h-[12rem] bg-gray-200 rounded-md border-2 border-white">
   <section className="flex justify-center items-center w-14 h-14 rounded-full shadow-md bg-gradient-to-r from-[#F9C97C] to-[#A2E9C1] hover:from-[#C9A9E9] hover:to-[#7EE7FC] hover:cursor-pointer hover:scale-110 duration-300">
     <svg viewBox="0 0 15 15" className="w-7 fill-gray-700">
         
