@@ -13,6 +13,7 @@ import Timecheck from "./components/Timecheck"
 import Randomcrypto from "./components/Randomcrypto"
 import Weathercard from "./components/Weathercard"
 import { Link, Element } from "react-scroll"
+import Crud from "./components/Crud"
 
 const App = () => {
   const [crypto, setCrypto] = useState(false);
@@ -20,6 +21,7 @@ const App = () => {
   const [time, setTime] = useState(false);
   const [randomCrypto, setRandomCrypto] = useState(false);
   const [weather, setWeather] = useState(false);
+  const [crud, setCrud] = useState(false);
 
 
 
@@ -34,13 +36,16 @@ const App = () => {
     <About />
    
     <Cards />
-    <Projects setCrypto={setCrypto} setInfo={setInfo} setTime={setTime} setRandomCrypto={setRandomCrypto} setWeather={setWeather}/>
+    <Projects setCrypto={setCrypto} setInfo={setInfo} setTime={setTime} setRandomCrypto={setRandomCrypto} setWeather={setWeather} setCrud={setCrud}/>
 
     {crypto && <Crypto crypto={crypto} />}
     {info && <Cardcheck info={info} />}
     {time && <Timecheck time={time}/>}
     {randomCrypto && <Randomcrypto randomCrypto={randomCrypto} />}
     {weather && <Weathercard weather={weather}/>}
+    {crud &&  <Crud crud={crud}/>}
+
+   
 
     
    

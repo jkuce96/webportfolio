@@ -5,7 +5,7 @@ import { Link, animateScroll as scroll } from 'react-scroll';
 
 
 
-const Projects = ( { setCrypto, setInfo, setTime, setRandomCrypto, setWeather } ) => {
+const Projects = ( { setCrypto, setInfo, setTime, setRandomCrypto, setWeather, setCrud } ) => {
     const toggleCrypto = () => {
         setCrypto(prevCrypto => {
             const newCryptoState = !prevCrypto;
@@ -16,6 +16,7 @@ const Projects = ( { setCrypto, setInfo, setTime, setRandomCrypto, setWeather } 
         setTime(false)
         setRandomCrypto(false)
         setWeather(false)
+        setCrud(false)
     };
     const toggleInfo = () => {
         setInfo(prevInfo => {
@@ -27,6 +28,7 @@ const Projects = ( { setCrypto, setInfo, setTime, setRandomCrypto, setWeather } 
         setTime(false)
         setRandomCrypto(false)
         setWeather(false)
+        setCrud(false)
 
     };
     const toggleTime = () => {
@@ -39,6 +41,8 @@ const Projects = ( { setCrypto, setInfo, setTime, setRandomCrypto, setWeather } 
         setInfo(false)
         setRandomCrypto(false)
         setWeather(false)
+        setCrud(false)
+
     }
     const toggleRandomCrypto = () => {
         setRandomCrypto(prevRandomCrypto => {
@@ -50,6 +54,8 @@ const Projects = ( { setCrypto, setInfo, setTime, setRandomCrypto, setWeather } 
         setInfo(false)
         setTime(false)
         setWeather(false)
+        setCrud(false)
+
     }
     const toggleWeather = () => {
         setWeather(prevWeather => {
@@ -61,11 +67,24 @@ const Projects = ( { setCrypto, setInfo, setTime, setRandomCrypto, setWeather } 
         setInfo(false)
         setTime(false)
         setRandomCrypto(false)
+        setCrud(false)
+    }
+    const toggleCrud = () => {
+        setCrud(prevCrud => {
+            const newCrudState =! prevCrud;
+            console.log(newCrudState);
+            return newCrudState
+        })
+        setCrypto(false)
+        setInfo(false)
+        setTime(false)
+        setRandomCrypto(false)
+        setWeather(false)
     }
 
   return (
     <div id="projekty" className="w-full bg-[#11071F] pt-[2rem] sm:pt-[5rem]">
-        <div className="max-w-[1080px] mx-auto text-white h-full">
+        <div id="scroll" className="max-w-[1080px] mx-auto text-white h-full">
             <div>
             <h2 className="text-3xl text-yellow-400 italic text-center">{`Pár osobních`}</h2>
 
@@ -77,7 +96,7 @@ const Projects = ( { setCrypto, setInfo, setTime, setRandomCrypto, setWeather } 
         <div className="cards grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1  md:gap-0 gap-0 mx-auto justify-center lg:h-[22rem] sm:h-[36rem] h-[48rem] relative px-[4rem] sm:px-[4rem]">
   <div className="w-full relative h-full flex-grow bg-gradient-to-br from-black to-black p-[1rem]">
     <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-        <h1 className="text-center font-bold">{`<Osobní projekty>`}</h1>
+        <h1 className="text-center font-bold text-yellow-300">{`<Osobní projekty>`}</h1>
         
     </div>
     
@@ -86,7 +105,7 @@ const Projects = ( { setCrypto, setInfo, setTime, setRandomCrypto, setWeather } 
             to="krypto"
             spy={true}
             smooth={true}
-            offset={-30}
+            offset={-100}
             duration={500}
           >
   <div onClick={toggleCrypto} className="w-full h-full flex-grow bg-gradient-to-br from-red-900 to-red-500 p-[1rem] relative cursor-pointer hover:from-red-900 to red-50 active:from-red-800">
@@ -101,7 +120,7 @@ const Projects = ( { setCrypto, setInfo, setTime, setRandomCrypto, setWeather } 
             to="krypto"
             spy={true}
             smooth={true}
-            offset={20}
+            offset={-60}
             duration={500}
           >
             
@@ -133,7 +152,7 @@ const Projects = ( { setCrypto, setInfo, setTime, setRandomCrypto, setWeather } 
             to="krypto"
             spy={true}
             smooth={true}
-            offset={-40}
+            offset={-60}
             duration={500}
           >
 
@@ -161,10 +180,25 @@ const Projects = ( { setCrypto, setInfo, setTime, setRandomCrypto, setWeather } 
     </div>
   </div>
           </Link>
-  <div className="w-full h-full flex-grow bg-gradient-to-br from-orange-900 to-orange-500 p-[1rem]"></div>
-  <div className="w-full h-full flex-grow bg-gradient-to-br from-indigo-900 to-indigo-500 p-[1rem] relative">
+          <Link
+            to="scroll"
+            spy={true}
+            smooth={true}
+            offset={500}
+            duration={500}
+          >
+
+  <div onClick={toggleCrud} className=" cursor-pointer w-full h-full flex-grow bg-gradient-to-br from-orange-900 to-orange-500 hover:from-orange-800 active:from-orange-400 p-[1rem] relative">
   <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-        <h1 className="text-center font-bold">{`</Osobní projekty>`}</h1>
+        <h1 className="text-center font-bold">Localhost CRUD</h1>
+        <FaHandPointer  className="absolute top-1/6 left-1/2"/>
+        
+    </div>
+  </div>
+          </Link>
+  <div className="w-full h-full flex-grow bg-gradient-to-br bg-black p-[1rem] relative">
+  <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+        <h1 className="text-center font-bold text-yellow-300">{`</Osobní projekty>`}</h1>
         
     </div>
   </div>
