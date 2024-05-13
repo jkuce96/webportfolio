@@ -55,11 +55,12 @@ function Weathercard() {
              {loading ? (<Skeleton />) : weatherData ? (<div>
              {/* <h2 className="text-2xl font-bold text-center py-8"></h2> */}
              
-             <p className="text-center text-4xl font-bold">{weatherData.name}</p>
-            <div className="text-center font-medium">
-                <p className="py-2  mx-8 mt-8 ">Teplota: {weatherData.main.temp}°C </p>
-                <p className="py-2  mx-8">Vlhkost: {weatherData.main.humidity} %</p>
-                <p className="py-2  mx-8">Tlak: {weatherData.main.pressure} hPa</p>    
+             <p className="text-center text-4xl font-bold w-1/3 pb-4 border-b-4 border-yellow-500 items-center mx-auto">{weatherData.name}</p>
+
+            <div className="text-center text-4xl font-medium">
+                <p className="py-2  mx-8 mt-8 ">Teplota: <span className="text-green-400">{weatherData.main.temp} °C</span> </p>
+                <p className="py-2  mx-8">Vlhkost: <span className="text-red-300">{weatherData.main.humidity} %</span></p>
+                <p className="py-2  mx-8">Tlak: <span className="text-blue-300">{weatherData.main.pressure} hPa</span></p>    
             </div>
             </div>) : (<div>
              <p className="text-center text-4xl font-bold">Zadej město:</p>

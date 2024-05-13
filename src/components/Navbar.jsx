@@ -1,7 +1,32 @@
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Logo from "../assets/logo.png";
+import PersonalCard from "../elements/PersonalCard";
 
 const Navbar = () => {
+  const [card, setCard] = useState(false);
+  const menuRef = useRef();
+
+  const togglePersonalCard = () => {
+
+    setCard(prevCard => !prevCard);
+  }
+
+  const handleClickOutside = (event) => {
+    if (!menuRef.current.contains(event.target)) {
+      setCard(false);
+    }
+  };
+
+
+
+  useEffect(() => {
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
   return (
     <nav className="w-full h-24 bg-[#150825]">
       <div className="flex justify-between items-center max-w-[1080px] mx-auto px-4 lg:px-8 h-full">
@@ -12,9 +37,12 @@ const Navbar = () => {
           <li className="text-white py-5 px-7 cursor-pointer">Informace</li>
           <li className="text-white py-5 px-7 cursor-pointer">Projekty</li>
         </ul>
-        <button className="text-lg bg-blue-400 py-2 px-4 rounded-lg">
+        <div ref={menuRef} className="relative">
+        <button onClick={togglePersonalCard}   className="text-lg bg-blue-400 py-2 px-4 rounded-lg relative">
           Kontakt
         </button>
+          {card && <PersonalCard/>}
+        </div>
       </div>
     </nav>
   );

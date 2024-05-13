@@ -7,7 +7,7 @@ import Cards from "./components/Cards"
 import Footer from "./components/Footer"
 import Projects from "./components/Projects"
 import Crypto from "./components/Crypto"
-import { useState } from "react"
+import { useState, useEffect, useRef } from "react"
 import Cardcheck from "./components/Cardcheck"
 import Timecheck from "./components/Timecheck"
 import Randomcrypto from "./components/Randomcrypto"
@@ -20,6 +20,8 @@ const App = () => {
   const [randomCrypto, setRandomCrypto] = useState(false);
   const [weather, setWeather] = useState(false);
 
+  
+
 
   return (
     <>
@@ -27,7 +29,7 @@ const App = () => {
     <Hero />
     <Scrollpanel />
     <About />
-
+   
     <Cards />
     <Projects setCrypto={setCrypto} setInfo={setInfo} setTime={setTime} setRandomCrypto={setRandomCrypto} setWeather={setWeather}/>
 
