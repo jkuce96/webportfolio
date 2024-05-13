@@ -57,10 +57,10 @@ function Weathercard() {
              
              <p className="text-center text-4xl font-bold w-1/3 pb-4 border-b-4 border-yellow-500 items-center mx-auto">{weatherData.name}</p>
 
-            <div className="text-center text-4xl font-medium">
-                <p className="py-2  mx-8 mt-8 ">Teplota: <span className="text-green-400">{weatherData.main.temp} °C</span> </p>
-                <p className="py-2  mx-8">Vlhkost: <span className="text-red-300">{weatherData.main.humidity} %</span></p>
-                <p className="py-2  mx-8">Tlak: <span className="text-blue-300">{weatherData.main.pressure} hPa</span></p>    
+            <div className="text-left text-4xl font-medium flex flex-col">
+                <p className="py-2  mx-8 mt-8  flex justify-between">Teplota: <span className="text-green-400">{weatherData.main.temp} °C</span> </p>
+                <p className="py-2  mx-8 flex justify-between">Vlhkost: <span className="text-red-300">{weatherData.main.humidity} %</span></p>
+                <p className="py-2  mx-8 flex justify-between">Tlak: <span className="text-blue-300">{weatherData.main.pressure} hPa</span></p>    
             </div>
             </div>) : (<div>
              <p className="text-center text-4xl font-bold">Zadej město:</p>

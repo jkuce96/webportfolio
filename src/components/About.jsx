@@ -1,6 +1,7 @@
 import React from 'react'
+import { useRef } from "react";
 
-const About = ({ setModal }) => {
+const About = () => {
 
   const onButtonClick = () => {
     const docxUrl = "/assets/CV.docx";
@@ -14,7 +15,7 @@ const About = ({ setModal }) => {
   
   return (
 
-    <div className="mx-auto w-fullů h-[16rem] flex justify-center bg-[#11071F] text-white pb-[25rem] pt-[6rem]">
+    <div id="about" className="mx-auto w-fullů h-[16rem] flex justify-center bg-[#11071F] text-white pb-[25rem] pt-[6rem]">
         <div className="flex flex-row">
             <div className=" mt-[10rem] items-center flex flex-col justify-center">
                 <h2 className="text-3xl text-yellow-400 italic">{`Pár informací`}</h2>

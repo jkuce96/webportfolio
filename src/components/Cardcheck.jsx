@@ -78,10 +78,10 @@ function Cardcheck() {
     <div className="w-full bg-[#11071F]">
     <div className="max-w-[1080px] mx-auto text-white shadow-xl flex flex-col py-5 rounded-lg">
               
-             <h2 className="text-2xl font-bold text-center py-8">Aktuální informace</h2>
-            <p className="text-center text-2xl font-bold">Tvoje IPv4: <br /> <span className="text-violet-600">{ip}</span> </p>
+             <h2 className="text-2xl font-bold text-center py-5"></h2>
+            <p className="text-center text-2xl font-bold">Tvoje IPv4: <br /> <span className="text-violet-600 hover:text-violet-500">{ip}</span> </p>
             <div className="text-center text-lg">
-                <p className=" text-center text-xl font-bold mt-5">Tvoje IPv6: <br /> <span className="text-violet-500">{ipv6}</span></p>
+                <p className=" text-center text-xl font-bold mt-5">Tvoje IPv6: <br /> <span className="text-violet-500 hover:text-violet-400">{ipv6}</span></p>
                   
             </div>
             

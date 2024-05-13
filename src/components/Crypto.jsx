@@ -30,18 +30,6 @@ function Crypto() {
         fetchData();
     }, []);
 
-    const handleBtcClick = () => {
-        setShowBTC(!showBTC)
-        console.log("works")
-        console.log(showBTC)
-    }
-    const handleEthClick = () => {
-        setShowETH(!showETH)
-        
-    }
-    const handleDogeClick = () => {
-        setShowDOGE(!showDOGE);
-    }
 
 
 
@@ -61,20 +49,19 @@ function Crypto() {
             />
             
         </div>
-        <p className="md:text-2xl text-xl font-bold text-gray-400">Aktualizováno jednou za pět minut</p>
         
         {bitcoinData && (
         <div className="kryptosekce flex flex-col md:flex-row my-6">
-            <div className="bg-purple-600 shadow-purple-600 shadow-xl hover:bg-purple-700 w-[200px] rounded-md font-medium my-3 mx-auto py-3 text-black relative cursor-pointer" onClick={handleBtcClick}>
+            <div className="bg-purple-600 shadow-purple-600 shadow-xl hover:bg-purple-700 w-[200px] rounded-md font-medium my-3 mx-auto py-3 text-black relative cursor-pointer" >
                 <h1 className="text-xl font-bold">BTC: {bitcoinData.bitcoin.usd} $</h1>
                 
                 
             </div>
-            <div className="bg-purple-600 shadow-purple-600 shadow-xl hover:bg-purple-700 w-[200px] rounded-md font-medium my-3 mx-auto py-3 text-black relative cursor-pointer" onClick={handleEthClick}>
+            <div className="bg-purple-600 shadow-purple-600 shadow-xl hover:bg-purple-700 w-[200px] rounded-md font-medium my-3 mx-auto py-3 text-black relative cursor-pointer" >
       <h1 className="text-xl font-bold">ETH: {bitcoinData.ethereum.usd} $</h1>
       
     </div>
-            <div className="bg-purple-600 shadow-purple-600 shadow-xl hover:bg-purple-700 w-[200px] rounded-md font-medium my-3 mx-auto py-3 text-black relative cursor-pointer" onClick={handleDogeClick}>
+            <div className="bg-purple-600 shadow-purple-600 shadow-xl hover:bg-purple-700 w-[200px] rounded-md font-medium my-3 mx-auto py-3 text-black relative cursor-pointer" >
                 <h1 className="text-xl font-bold">DOGE: {bitcoinData.dogecoin.usd} $</h1>
                 
             </div>

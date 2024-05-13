@@ -3,8 +3,23 @@ import {
     FaInstagramSquare,
     FaFacebookSquare,
     FaTwitterSquare,
-    FaGithubSquare
+    FaGithubSquare,
+    FaReact,
+    FaCss3Alt,
 } from "react-icons/fa"
+import { 
+    IoLogoJavascript,
+    IoLogoFirebase,
+
+ } from "react-icons/io5";
+import { 
+    RiTailwindCssFill,
+    RiSvelteFill,
+ } from "react-icons/ri";
+import { SiMysql } from "react-icons/si";
+
+
+
 
 function Footer() {
   return (
@@ -13,11 +28,17 @@ function Footer() {
         <div>
             <h1 className="w-full text-3xl font-bold text-violet-500">Est. 1996</h1>
             <p className="py-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum mollitia dolorem alias suscipit quod dolore hic nisi delectus obcaecati tempore!</p>
-            <div className="flex justify-between md:w-[75%] my-6">
-                <FaFacebookSquare className="cursor-pointer" size={30}/>
-                <FaInstagramSquare className="cursor-pointer" size={30}/>
-                <FaTwitterSquare className="cursor-pointer" size={30}/>
-                <FaGithubSquare className="cursor-pointer" size={30}/>
+            <div className="flex justify-between w-full my-6">
+                <FaReact className="cursor-pointer hover:scale-105 hover:text-[#5ED3F3]" size={30}/>
+                <IoLogoJavascript className="cursor-pointer hover:scale-105 hover:text-[#E9D44D]" size={30}/>
+                <RiTailwindCssFill className="cursor-pointer hover:scale-105 hover:text-[#36B7F0]" size={30}/>
+                <FaCss3Alt className="cursor-pointer hover:scale-105 hover:text-[#2862E9]" size={30}/>
+                <SiMysql className="cursor-pointer hover:scale-105 hover:text-[#DD8800]" size={30}/>
+                <IoLogoFirebase className="cursor-pointer hover:scale-105 hover:text-[#EE7F0D]" size={30}/>
+                <RiSvelteFill className="cursor-pointer hover:scale-105 hover:text-[#F73C00]" size={30}/>
+                
+
+
                 
             </div>
         </div>

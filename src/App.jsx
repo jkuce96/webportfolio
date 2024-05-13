@@ -12,6 +12,7 @@ import Cardcheck from "./components/Cardcheck"
 import Timecheck from "./components/Timecheck"
 import Randomcrypto from "./components/Randomcrypto"
 import Weathercard from "./components/Weathercard"
+import { Link, Element } from "react-scroll"
 
 const App = () => {
   const [crypto, setCrypto] = useState(false);
@@ -19,6 +20,8 @@ const App = () => {
   const [time, setTime] = useState(false);
   const [randomCrypto, setRandomCrypto] = useState(false);
   const [weather, setWeather] = useState(false);
+
+
 
   
 
