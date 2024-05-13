@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import Logo from "../assets/logo.png";
+import Logo from "../assets/logo4.png";
 import PersonalCard from "../elements/PersonalCard";
 import { PiHamburger } from "react-icons/pi";
 import { IoMdCloseCircleOutline } from "react-icons/io";

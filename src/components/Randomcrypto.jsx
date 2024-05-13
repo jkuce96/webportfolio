@@ -20,7 +20,7 @@ const Randomcrypto = () => {
             const randomIndex = Math.floor(Math.random() * coins.length);
             const randomCoin = coins[randomIndex];
 
-            const roundedCena = Number(randomCoin.item.data.price).toFixed(2);
+            const roundedCena = Number(randomCoin.item.data.price).toFixed(3);
 
             setTimeout(() => {
                setVybranyCoin({
