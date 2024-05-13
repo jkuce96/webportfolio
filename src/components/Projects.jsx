@@ -62,13 +62,13 @@ const Projects = ( { setCrypto, setInfo, setTime, setRandomCrypto, setWeather } 
     }
 
   return (
-    <div id="projekty" className="w-full bg-[#11071F] pt-[5rem]">
+    <div id="projekty" className="w-full bg-[#11071F] pt-[2rem] sm:pt-[5rem]">
         <div className="max-w-[1080px] mx-auto text-white h-full">
             <div>
             <h2 className="text-3xl text-yellow-400 italic text-center">{`Pár osobních`}</h2>
 
             <h1 className="text-center text-7xl w-full font-bold mt-1 mb-5">mini-projektů</h1>
-            <div className="border-b-4 items-center mx-auto border-yellow-400 rounded-lg mb-[3rem]  w-[25rem]"></div>
+            <div className="border-b-4 items-center mx-auto border-yellow-400 rounded-lg mb-[3rem]  w-3/4"></div>
             {/* <p className="text-center mt-5 text-2xl w-[20rem] sm:w-[40rem] mx-auto">ahoj</p> */}
                 
             </div>
