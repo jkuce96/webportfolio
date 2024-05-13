@@ -23,13 +23,12 @@ import { SiMysql } from "react-icons/si";
 
 function Footer() {
   return (
-    <div className="w-full bg-[#11071F]">
+    <div className="w-full bg-[#11071F]" id="krypto">
     <div className="max-w-[1080px] bg-[#11071F] mx-auto py-16 px-4 grid lg:grid-cols-3 gap-8 text-gray-300">
         <div>
             <h1 className=" text-3xl font-bold text-violet-500">Est. 1996</h1>
             <p className="py-4">
-                Pravidelně se vzdělávám v nových technologiích. Rozvíjím se v oblasti fullstack Node.JS, primárně skrze kombinaci React/Tailwind. Aktuálně studuji 
-                !</p>
+                Pravidelně se vzdělávám v nových technologiích. Rozvíjím se v oblasti fullstack Node.JS, primárně skrze kombinaci React/Express. Aktuálně studuji Next.JS</p>
             <div className="flex justify-between w-full my-6">
                 <FaReact className="cursor-pointer hover:scale-105 hover:text-[#5ED3F3]" size={30}/>
                 <IoLogoJavascript className="cursor-pointer hover:scale-105 hover:text-[#E9D44D]" size={30}/>

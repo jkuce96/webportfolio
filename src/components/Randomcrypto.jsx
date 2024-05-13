@@ -41,7 +41,7 @@ const Randomcrypto = () => {
 
 
   return (
-    <div className="w-full bg-[#11071F]">
+    <div className="w-full bg-[#11071F]" >
         <div className="max-w-[1080px] mx-auto flex flex-col px-6 md:px-[5rem] lg:px-[18rem] py-5 text-w text-white">
             
             {loading ? (<div className="w-full bg-black shadow-xl flex flex-col py-4 md:my-0 my-8 rounded-lg hover:scale-105  duration-300 shadow-purple-700">

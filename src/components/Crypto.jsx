@@ -34,8 +34,8 @@ function Crypto() {
 
 
   return (
-    <div className="text-white w-full bg-[#11071F]">
-    <div className="max-w-[800px]  w-full pt-[4rem] pb-[15rem] mx-auto text-center flex flex-col justify-center">
+    <div className="text-white w-full bg-[#11071F]" id="krypto">
+    <div className="max-w-[800px]  w-full pt-[4rem]  mx-auto text-center flex flex-col justify-center">
                 
         <h1 className="md:text-7xl sm:text-6xl text-4xl font-bold md:py-6">Ceny kryptoměn</h1>
         <div className="flex justify-center items-center">

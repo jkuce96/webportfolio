@@ -1,6 +1,8 @@
 import React from 'react'
 import reactLogo from "../assets/reactlogo.png"
 import { FaHandPointer } from "react-icons/fa";
+import { Link, animateScroll as scroll } from 'react-scroll';
+
 
 
 const Projects = ( { setCrypto, setInfo, setTime, setRandomCrypto, setWeather } ) => {
@@ -80,6 +82,13 @@ const Projects = ( { setCrypto, setInfo, setTime, setRandomCrypto, setWeather } 
     </div>
     
   </div>
+  <Link
+            to="krypto"
+            spy={true}
+            smooth={true}
+            offset={-30}
+            duration={500}
+          >
   <div onClick={toggleCrypto} className="w-full h-full flex-grow bg-gradient-to-br from-red-900 to-red-500 p-[1rem] relative cursor-pointer hover:from-red-900 to red-50 active:from-red-800">
   <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
         <h1 className="text-center font-bold">Crypto price checker</h1>
@@ -87,6 +96,15 @@ const Projects = ( { setCrypto, setInfo, setTime, setRandomCrypto, setWeather } 
         
     </div>
   </div>
+  </Link>
+  <Link
+            to="krypto"
+            spy={true}
+            smooth={true}
+            offset={20}
+            duration={500}
+          >
+            
   <div  onClick={toggleInfo} className=" cursor-pointer w-full h-full flex-grow bg-gradient-to-br from-yellow-900 to-yellow-500 hover:from-yellow-900 to yellow-50 p-[1rem] relative active:from-yellow-500">
   <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
         <h1 className="text-center font-bold">IP checker</h1>
@@ -94,6 +112,15 @@ const Projects = ( { setCrypto, setInfo, setTime, setRandomCrypto, setWeather } 
         
     </div>
   </div>
+          </Link>
+          <Link
+            to="krypto"
+            spy={true}
+            smooth={true}
+            offset={20}
+            duration={500}
+          >
+
   <div onClick={toggleTime} className=" cursor-pointer w-full h-full flex-grow bg-gradient-to-br from-green-900 to-green-500 hover:from-green-900 to green-50 p-[1rem] relative active:from-green-800">
   <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
         <h1 className="text-center font-bold">Time checker</h1>
@@ -101,6 +128,15 @@ const Projects = ( { setCrypto, setInfo, setTime, setRandomCrypto, setWeather } 
         
     </div>
   </div>
+          </Link>
+          <Link
+            to="krypto"
+            spy={true}
+            smooth={true}
+            offset={-40}
+            duration={500}
+          >
+
   <div onClick={toggleRandomCrypto} className="w-full h-full flex-grow bg-gradient-to-br from-black to-gray-800 hover:from-black to gray-50 p-[1rem] relative cursor-pointer">
   <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
         <h1 className="text-center font-bold">Random crypto picker</h1>
@@ -108,6 +144,15 @@ const Projects = ( { setCrypto, setInfo, setTime, setRandomCrypto, setWeather } 
         
     </div>
   </div>
+          </Link>
+          <Link
+            to="krypto"
+            spy={true}
+            smooth={true}
+            offset={-25}
+            duration={500}
+          >
+
   <div onClick={toggleWeather} className="w-full cursor-pointer relative h-full flex-grow bg-gradient-to-br from-purple-900 to-purple-500 hover:from-purple-900 active:from-purple-800 p-[1rem]">
   <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
         <h1 className="text-center font-bold">Zkontrolovat počasí</h1>
@@ -115,6 +160,7 @@ const Projects = ( { setCrypto, setInfo, setTime, setRandomCrypto, setWeather } 
         
     </div>
   </div>
+          </Link>
   <div className="w-full h-full flex-grow bg-gradient-to-br from-orange-900 to-orange-500 p-[1rem]"></div>
   <div className="w-full h-full flex-grow bg-gradient-to-br from-indigo-900 to-indigo-500 p-[1rem] relative">
   <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
