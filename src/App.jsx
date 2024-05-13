@@ -40,7 +40,7 @@ const App = () => {
     {weather && <Weathercard weather={weather}/>}
 
     
-    
+   
     
     
     

@@ -75,7 +75,7 @@ const Projects = ( { setCrypto, setInfo, setTime, setRandomCrypto, setWeather } 
         <div className="cards grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1  md:gap-0 gap-0 mx-auto justify-center lg:h-[22rem] sm:h-[36rem] h-[48rem] relative px-[4rem] sm:px-[4rem]">
   <div className="w-full relative h-full flex-grow bg-gradient-to-br from-black to-black p-[1rem]">
     <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-        <h1 className="text-center font-bold">Osobní projekty</h1>
+        <h1 className="text-center font-bold">{`<Osobní projekty>`}</h1>
         
     </div>
     
@@ -116,7 +116,12 @@ const Projects = ( { setCrypto, setInfo, setTime, setRandomCrypto, setWeather } 
     </div>
   </div>
   <div className="w-full h-full flex-grow bg-gradient-to-br from-orange-900 to-orange-500 p-[1rem]"></div>
-  <div className="w-full h-full flex-grow bg-gradient-to-br from-indigo-900 to-indigo-500 p-[1rem]"></div>
+  <div className="w-full h-full flex-grow bg-gradient-to-br from-indigo-900 to-indigo-500 p-[1rem] relative">
+  <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+        <h1 className="text-center font-bold">{`</Osobní projekty>`}</h1>
+        
+    </div>
+  </div>
 </div>
 
 

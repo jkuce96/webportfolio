@@ -1,6 +1,16 @@
 import React from 'react'
 
 const About = ({ setModal }) => {
+
+  const onButtonClick = () => {
+    const docxUrl = "/assets/CV.docx";
+    const link = document.createElement("a");
+    link.href = docxUrl;
+    link.download = "CV.docx"; 
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+};
   
   return (
 
@@ -12,7 +22,7 @@ const About = ({ setModal }) => {
                 <div className="border-b-4 border-yellow-400 rounded-lg  w-[10rem]
                 "></div>
                 <p className="sm:w-[40rem] w-[20rem] text-center mt-5 text-2xl">Zaměřuji se primárně na vývoj <span className="text-yellow-400 font-bold">JavaScript</span> aplikací. Mezi můj základní stack patří Vanilla JS, CSS3, HTML5 a Tailwind. Věnuji se backendovému i frontendovému vývoji webových stránek skrze <span className="text-[#59BEDA] font-bold">React.JS</span> a <span className="text-purple-400 font-bold">Express.JS</span></p>
-            <button  className="mt-[2rem] bg-yellow-400 active:bg-yellow-400 rounded-lg py-4 px-5 text-lg font-bold text-black hover:bg-yellow-500">Stáhnout životopis</button>
+            <button onClick={onButtonClick} className="mt-[2rem] bg-yellow-400 active:bg-yellow-400 rounded-lg py-4 px-5 text-lg font-bold text-black hover:bg-yellow-500">Stáhnout životopis</button>
             </div>
         </div>
         
